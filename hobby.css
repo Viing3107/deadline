@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Denk+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,19 +12,24 @@ html {
 
 body {
     background: linear-gradient(to right, #c3c7f3, #e3aadd);
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.1);
-    height: 8vh;
+    height: 100%;
     width: 100%;
 }
 
 header a {
+    line-height: 40px;
+    width: 130px;
+    text-align: center;
     font-size: 1.8rem;
     font-weight: 500;
     color: #3e3c6e;
@@ -39,35 +44,130 @@ header a:hover {
     transition: 0.1s all ease;
 }
 
+.content .list li {
+    font-size: 3rem;
+    font-family: Patrick Hand;
+    list-style: disc;
+    margin-left: 9%;
+}
+
 .content h1 {
     text-align: center;
     font-size: 5rem;
-    font-family: Consolas, Patrick Hand;
+    font-family: Denk One, Consolas, Patrick Hand;
     margin: 5vh;
 }
 
-.list li {
+.content .box .song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.content .box .song1 {
+    animation: animate 2s cubic-bezier(1, 1, 0, 1) alternate;
+}
+
+.content .box .song2 {
+    animation: animate 2.5s cubic-bezier(1, 1, 0, 1) alternate;
+}
+
+.content .box .song3 {
+    animation: animate 3s cubic-bezier(1, 1, 0, 1) alternate;
+}
+
+.content .box .song4 {
+    animation: animate 3.5s cubic-bezier(1, 1, 0, 1) alternate;
+}
+
+@keyframes animate {
+    0% {
+        left: 5000px;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.content .box .tilte {
     font-size: 3rem;
     margin-left: 7%;
     list-style: disc;
     font-family: Patrick Hand;
     line-height: 4rem;
+    /* background-color: red; */
+    height: 100%;
 }
 
-.box li {
-    display: flex;
-    align-items: center;
-    line-height: 6rem;
-}
-
-.box li .tilte {
-    font-size: 3rem;
-    font-family: Patrick Hand;
-    margin-left: 5%;
-}
-
-.box li .audio {
+.content .box div .audio {
     position: absolute;
     right: 0;
-    margin-right: 5%;
+    width: 30%;
+}
+
+.content .box div audio {
+    width: 250px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+    .content h1 {
+        font-size: 4rem;
+    }
+
+    .content .list li, .content .box .tilte {
+        font-size: 3rem;
+    }
+
+    .content .box div audio {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1070px) { 
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content .list li, .content .box .tilte {
+        font-size: 2rem;
+    }
+
+    .content .box div audio {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content .box .song {
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .content .box .tilte {
+        text-align: center;
+    }
+
+    .content .box div .audio {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content .box div audio {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    
+}
+
+@media screen and (max-width: 390px) {
+    
 }
