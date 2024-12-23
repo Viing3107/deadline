@@ -35,7 +35,6 @@ header .logo a {
 }
 
 header .nav-bar {
-    font-size: 4rem;
     width: 50vw;
     height: 100%;
     display: flex;
@@ -44,6 +43,7 @@ header .nav-bar {
 }
 
 header div a {
+    font-size: 2rem;
     line-height: 40px;
     width: 130px;
     text-align: center;
