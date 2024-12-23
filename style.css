@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Denk+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,48 +18,49 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.1);
-    height: 100%;
     width: 100%;
 }
 
-header a {
+header .logo {
+    height: 100%;
+}
+
+header .logo a {
+    display: block;
+    width: 150px;
+}
+
+header .nav-bar {
+    font-size: 4rem;
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header div a {
     line-height: 40px;
     width: 130px;
     text-align: center;
-    font-size: 1.8rem;
     font-weight: 500;
-    color: #dbc8ed;
-    font-family: Jetbrains Mono;
+    color: black;
+    font-family: Poppins, Jetbrains Mono;
 }
 
 header a:hover {
-    transform: scale(1.3);
-    transform-origin: top;
     color: #c3e8c9;
+    transform-origin: top;
     text-decoration: underline;
-    transition: 0.1s all ease;
+    transition: 0.75s all ease;
 }
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0, 0.1);
-    filter: blur(10px);
-    width: 100%;
-    height: 100%;
-}
-
-/* 920 x 560 */
 
 .content {
-    position: relative;
-    z-index: 1;
-    height: 80vh;
+    height: calc(90vh - 40px);
     width: 90vw;
     display: flex;
     align-items: center;
@@ -71,7 +72,6 @@ header a:hover {
 
 .content .infor {
     width: 60%;
-    font-size: 4rem;
     font-family: Consolas;
     color: white;
 }
@@ -119,12 +119,124 @@ header a:hover {
     height: 25vw;
     border-radius: 50%;
     filter: drop-shadow(0 0 10px white);
-    background-color: blue;
 }
 
+@media screen and (min-width: 2450px) and (max-width: 3000px) {
+    header a {
+        font-size: 3rem;
+    }
+    
+    .content .infor:not(.div) {
+        font-size: 8rem;
+    }
 
-@media screen and (min-width: 1001px) and (max-width: 1920px) {
-    .content .infor p, .content .infor .clip-text div {
+    .content .infor .div p {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 2449px) {
+    header a {
+        line-height: 60px;
+        font-size: 2.2rem;
+    }
+
+    .content .infor:not(.div) {
+        font-size: 6rem;
+    }
+
+    .content .infor .div p {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1832px) {
+    header a {
+        line-height: 50px;
+        font-size: 2rem;
+    }
+    
+    .content .infor:not(.div) {
+        font-size: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .content .infor:not(.div) {
+        font-size: 5rem;
+    }
+    
+    .content .infor .div p {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1527px) {
+    .content .infor .div p {
+        font-size: 2.5rem;
+    }
+
+    .content .infor:not(.div) {
+        font-size: 4.5rem;
+    }
+
+    .content .avartar {
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 1375px) {
+    .content .infor .div p {
+        font-size: 2.5rem;
+    }
+
+    .content .infor:not(.div) {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    .content .infor .div p {
+        font-size: 2rem;
+    }
+
+    .content .infor:not(.div) {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1075px) { 
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content .infor {
+        width: 80%;
+    }
+
+    .content .infor:not(.div) {
+        font-size: 3.5rem;
+    }
+
+    .content .infor .div p {
+        font-size: 2rem;
+    }
+    
+    .content .avartar {
+        scale: 0.7;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .content .infor:not(.div) {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .content .infor:not(.div) {
         font-size: 3rem;
     }
 
@@ -133,16 +245,8 @@ header a:hover {
     }
 }
 
-@media screen and (max-width: 1000px) { 
-    .content {
-        flex-direction: column-reverse;
-    }
-
-    .content .infor {
-        width: 80%;
-    }
-
-    .content .infor p, .content .infor .clip-text div {
+@media screen and (max-width: 695px) {
+    .content .infor:not(.div) {
         font-size: 2.5rem;
     }
 
@@ -151,28 +255,34 @@ header a:hover {
     }
 
     .content .avartar {
-        height: 20vh;
+        transform: scale(1.2);
     }
 }
 
-@media screen and (max-width: 576px) {
-    .content .infor p, .content .infor .clip-text div {
-        font-size: 1.6rem;
+@media screen and (max-width: 575px) {
+    header {
+        flex-direction: column;
+    }
+    
+    .content .infor:not(.div) {
+        font-size: 2rem;
     }
 
     .content .infor .div p {
-        font-size: 1.1rem;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .content .avartar {
-        height: 30vh;
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 390px) {
+    .content .infor:not(.div) {
+        font-size: 1.6rem;
+    }
+
+    .content .infor .div p {
+        font-size: 1rem;
+    }
+
     .content .avartar {
-        transform: scale(1.5);
+        scale: 2;
     }
 }

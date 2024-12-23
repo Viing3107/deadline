@@ -17,30 +17,45 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.1);
-    height: 100%;
     width: 100%;
 }
 
-header a {
+header .logo {
+    height: 100%;
+}
+
+header .logo a {
+    display: block;
+    width: 150px;
+}
+
+header .nav-bar {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header div a {
+    font-size: 2rem;
     line-height: 40px;
     width: 130px;
     text-align: center;
-    font-size: 1.8rem;
     font-weight: 500;
-    color: #dbc8ed;
-    font-family: Jetbrains Mono;
+    color: black;
+    font-family: Poppins, Jetbrains Mono;
 }
 
 header a:hover {
-    transform: scale(1.3);
-    transform-origin: top;
     color: #80d0c7;
+    transform-origin: top;
     text-decoration: underline;
-    transition: 0.1s all ease;
+    transition: 0.75s all ease;
 }
 
 h1 {
@@ -68,11 +83,41 @@ h1 {
 
 .content img:hover {
     z-index: 1;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
+    transform: translateX(30px) rotate(5deg);
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
-.content .pic1 {
+.content .image:hover :not(:hover) {
+    filter: blur(1px);
+    z-index: 0;
+    opacity: 0.7;
+    transition: all 1s cubic-bezier(1, 0, 0, 1);
+}
+
+.content img:active {
+    animation: isActive 0.1s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes isActive {
+    0% {
+        transform: none;
+    }
+    
+    33.3% {
+       transform: rotate(-1deg); 
+    }
+
+    66.6% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+/* .content .pic1 {
     position: relative;
     animation: animate1 2s cubic-bezier(1, 0, 0, 1) alternate;
 }
@@ -134,12 +179,18 @@ h1 {
     100% {
         left: 0;
     }
-}
+} */
 
 @media screen and (max-width: 916px) {
     .content .image {
         height: 730px;
         padding: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        flex-direction: column;
     }
 }
 
