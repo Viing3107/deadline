@@ -116,7 +116,7 @@ header a:hover {
 }
 
 .content img {
-    height: 25vw;
+    height: 300px;
     border-radius: 50%;
     filter: drop-shadow(0 0 10px white);
 }
@@ -254,9 +254,9 @@ header a:hover {
         font-size: 1.6rem;
     }
 
-    .content .avartar {
+    /* .content .avartar {
         transform: scale(1.2);
-    }
+    } */
 }
 
 @media screen and (max-width: 575px) {
@@ -282,7 +282,7 @@ header a:hover {
         font-size: 1rem;
     }
 
-    .content .avartar {
+    /* .content .avartar {
         scale: 2;
-    }
+    } */
 }
