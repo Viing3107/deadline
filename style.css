@@ -60,7 +60,7 @@ header a:hover {
 }
 
 .content {
-    height: calc(90vh - 40px);
+    height: 600px;
     width: 90vw;
     display: flex;
     align-items: center;
@@ -227,7 +227,7 @@ header a:hover {
     }
 
     .content .infor .title {
-        font-size: 5rem;
+        font-size: 3.7rem;
     }
 
     .content .infor .div p {
@@ -247,21 +247,21 @@ header a:hover {
 
 @media screen and (max-width: 805px) {
     .content .infor .title {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .content .infor .div p {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 695px) {
     .content .infor .title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .content .infor .div p {
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -271,7 +271,7 @@ header a:hover {
     }
     
     .content .infor:not(.div) {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
 
     .content .infor .div p {
@@ -280,8 +280,8 @@ header a:hover {
 }
 
 @media screen and (max-width: 390px) {
-    .content .infor:not(.div) {
-        font-size: 1.6rem;
+    .content .infor .title {
+        font-size: 1.5rem;
     }
 
     .content .infor .div p {
