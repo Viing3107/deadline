@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Denk+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Denk+One&family=Dongle&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&family=Spline+Sans:wght@300..700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -71,14 +71,23 @@ header a:hover {
 }
 
 .content .infor {
-    width: 60%;
-    font-family: Consolas;
+    width: 60vw;
     color: white;
 }
 
+.content .infor .title {
+    font-size: 6rem;
+    font-family: Dongle, Oswald;
+    line-height: 40px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
 .content .infor .div {
-    margin-top: 4rem;
-    font-size: 2rem;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 40px;
+    font-family: Oswald, Pacifico;
 }
 
 .content .clip-text {
@@ -86,7 +95,8 @@ header a:hover {
 }
 
 .content .clip-text div {
-    width: 24ch;
+    display: block;
+    width: 100%;
     margin-left: 1ch;
     color: #c8a8e9;
     white-space: nowrap;
@@ -101,7 +111,7 @@ header a:hover {
     }
 
     30%, 70% {
-        width: 24ch;
+        width: 27ch;
     }
 
     90%, 100% {
@@ -126,7 +136,7 @@ header a:hover {
         font-size: 3rem;
     }
     
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 8rem;
     }
 
@@ -141,7 +151,7 @@ header a:hover {
         font-size: 2.2rem;
     }
 
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 6rem;
     }
 
@@ -156,13 +166,13 @@ header a:hover {
         font-size: 2rem;
     }
     
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 5.5rem;
     }
 }
 
 @media screen and (max-width: 1680px) {
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 5rem;
     }
     
@@ -172,12 +182,12 @@ header a:hover {
 }
 
 @media screen and (max-width: 1527px) {
-    .content .infor .div p {
-        font-size: 2.5rem;
+    .content .infor .title {
+        font-size: 4.5rem;
     }
 
-    .content .infor:not(.div) {
-        font-size: 4.5rem;
+    .content .infor .div p {
+        font-size: 2.5rem;
     }
 
     .content .avartar {
@@ -186,22 +196,22 @@ header a:hover {
 }
 
 @media screen and (max-width: 1375px) {
-    .content .infor .div p {
-        font-size: 2.5rem;
+    .content .infor .title {
+        font-size: 5rem;
     }
 
-    .content .infor:not(.div) {
-        font-size: 4rem;
+    .content .infor .div p {
+        font-size: 2.5rem;
     }
 }
 
 @media screen and (max-width: 1225px) {
-    .content .infor .div p {
-        font-size: 2rem;
+    .content .infor .title {
+        font-size: 5rem;
     }
 
-    .content .infor:not(.div) {
-        font-size: 3.5rem;
+    .content .infor .div p {
+        font-size: 2rem;
     }
 }
 
@@ -216,47 +226,43 @@ header a:hover {
         width: 80%;
     }
 
-    .content .infor:not(.div) {
-        font-size: 3.5rem;
+    .content .infor .title {
+        font-size: 5rem;
     }
 
     .content .infor .div p {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .content .avartar {
-        scale: 0.7;
+        scale: 0.5;
     }
 }
 
 @media screen and (max-width: 920px) {
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 3.5rem;
     }
 }
 
 @media screen and (max-width: 805px) {
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 3rem;
     }
 
     .content .infor .div p {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 695px) {
-    .content .infor:not(.div) {
+    .content .infor .title {
         font-size: 2.5rem;
     }
 
     .content .infor .div p {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
-
-    /* .content .avartar {
-        transform: scale(1.2);
-    } */
 }
 
 @media screen and (max-width: 575px) {
