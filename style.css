@@ -118,7 +118,7 @@ header div i {
 .content .clip-text div {
     display: block;
     width: 100%;
-    padding-left: 1ch;
+    padding-left: 0.8ch;
     color: #c8a8e9;
     white-space: nowrap;
     overflow: hidden;
