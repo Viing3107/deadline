@@ -34,7 +34,7 @@ header .logo a {
 }
 
 header .nav-bar {
-    width: 50vw;
+    width: 60vw;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@ header .nav-bar {
 header div a {
     font-size: 2rem;
     line-height: 40px;
-    width: 130px;
+    width: 190px;
     text-align: center;
     font-weight: 500;
     color: black;
@@ -56,6 +56,10 @@ header a:hover {
     transform-origin: top;
     text-decoration: underline;
     transition: 0.75s all ease;
+}
+
+header div i {
+    margin-right: 0.5ch;
 }
 
 h1 {
