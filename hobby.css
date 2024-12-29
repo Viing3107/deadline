@@ -100,6 +100,10 @@ header div i {
     animation: animate 3.5s cubic-bezier(1, 1, 0, 1) alternate;
 }
 
+.content .box .song5 {
+    animation: animate 4s cubic-bezier(1, 1, 0, 1) alternate;
+}
+
 @keyframes animate {
     0% {
         left: 5000px;
