@@ -371,6 +371,10 @@ header div i {
     header {
         flex-direction: column;
     }
+
+    .content .infor .title {
+        font-size: 2rem;
+    }
     
     .content .infor:not(.div) {
         font-size: 2.6rem;
@@ -378,6 +382,23 @@ header div i {
 
     .content .infor .div p {
         font-size: 1.5rem;
+    }
+
+    @keyframes typing {
+        0%, 10% {
+            width: 0;
+            text-shadow: none;
+        }
+    
+        30%, 70% {
+            width: 29ch;
+            text-shadow: 0 0 10px currentColor;
+        }
+    
+        90%, 100% {
+            width: 0%;
+            text-shadow: none;
+        }
     }
 }
 
