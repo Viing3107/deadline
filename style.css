@@ -64,7 +64,7 @@ header div i {
 }
 
 .content {
-    height: 500px;
+    height: 85vh;
     width: 90vw;
     display: flex;
     align-items: center;
@@ -191,6 +191,23 @@ header div i {
 
     .content .infor .div p {
         font-size: 3.5rem;
+    }
+
+    @keyframes typing {
+        0%, 10% {
+            width: 0;
+            text-shadow: none;
+        }
+    
+        30%, 70% {
+            width: 25ch;
+            text-shadow: 0 0 10px currentColor;
+        }
+    
+        90%, 100% {
+            width: 0%;
+            text-shadow: none;
+        }
     }
 }
 
