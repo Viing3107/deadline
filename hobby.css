@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, #c3c7f3, #986ddd);
+    background: linear-gradient(to right, #c3c7f3, #6d74dd);
     overflow-x: hidden;
 }
 
@@ -53,7 +53,7 @@ header div a {
 }
 
 header a:hover {
-    color: #4d37f0;
+    color: #5f3ebb;
     transform-origin: top;
     text-decoration: underline;
     transition: 0.75s all ease;
